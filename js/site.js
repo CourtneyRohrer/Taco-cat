@@ -31,9 +31,9 @@ function reverseString(userString){
 function tacoCat(inputString, reverseString) {
 
       if (inputString === reverseString) {
-        document.getElementById("msg").innerHTML = `Congratulations, this is a palindrome!!!`;
+        document.getElementById("msg").innerHTML = `Congratulations, this is a palindrome!!! Your string reversed is: ${reverseString}`;
     } else {
-        document.getElementById("msg").innerHTML = `Sorry, this is not a palindrome`;
+        document.getElementById("msg").innerHTML = `Sorry, this is not a palindrome. Your string reversed is: ${reverseString}`;
     }
         document.getElementById("alert").classList.remove("invisible");
    
