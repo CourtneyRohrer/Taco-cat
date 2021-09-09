@@ -55,11 +55,46 @@
     <h2 class="border-1 border-bottom border-dark">The Code for TACO CAT</h2>
     <div class="row row-cols-1 row-cols-lg-2">
         <div class="col-lg-8">
-            <pre class="line-numbers"><code class="language-javascript">
-                //Call Hello World 
-                function helloWorld(){
-                    alert("Hello World");
-                }
+            <pre class="line-numbers"><code class="language-javascript">           
+function getString() {  
+
+    let inputString = document.getElementById ("inputString").value;
+
+            inputString = inputString
+                 .replace(/[^\w\s+]|_/g, "")
+                 .replace(/\s+/g, "").toLowerCase();
+    
+                   
+
+    let x = reverseString(inputString)
+
+  tacoCat(inputString, x) 
+}
+ 
+function reverseString(userString){
+
+        let revString = [];
+
+  for (let index = userString.length - 1 ; index >= 0; index--) {
+
+         revString += userString[index];  
+}
+
+
+    return revString;
+
+}
+
+function tacoCat(inputString, reverseString) {
+
+      if (inputString === reverseString) {
+        document.getElementById("msg").innerHTML = `Congratulations, this is a palindrome!!!`;
+    } else {
+        document.getElementById("msg").innerHTML = `Sorry, this is not a palindrome`;
+    }
+        document.getElementById("alert").classList.remove("invisible");
+   
+}
             </code></pre>
         </div>
         <div class="col-lg-4">
